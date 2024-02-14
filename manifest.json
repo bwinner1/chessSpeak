@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ChessSpeak",
+  "version": "1.0.0",
+  "description": "ChessSpeak enables blind and blindfolded chess players to reach their full potential. ",
+  "author": "MBI",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "Javascript/src/background.js"
+  },
+  "action": {},
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "Command+B",
+        "linux": "Ctrl+Shift+Q"
+      }
+    }
+  }
+}

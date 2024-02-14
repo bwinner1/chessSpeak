@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script type="module" src="../Javascript/src/script.js"></script>
+    <title>ChessSpeak</title>
+</head>
+<body>
+
+<h1>ChessSpeak</h1>
+
+<div>
+    <h3>Opponent's last move</h3>
+    <p id="opponentsLastMove" class="fontAdjustment" style="font-size: 15px"></p>
+    <p class="visually-hidden">Opponents last move is shown here and simultaneously spoken aloud.</p>
+</div>
+
+<div>
+    <label class="fontAdjustment" style="font-size: 15px" for="yourNextMove">Your next move</label>
+    <div class="button-group">
+        <input id="yourNextMove" type="text" placeholder="enter your next move here">
+
+        <button type="submit" id="submitButton">
+            <p class="visually-hidden">This button submits the move specified in the input field.</p>
+            <i class="fa fa-arrow-right"></i>
+        </button>
+
+        <button id="speechRecognitionButton">
+            <p class="visually-hidden">This button takes speech Input to execute move.</p>
+            <i class="fa fa-microphone"></i>
+        </button>
+
+    </div>
+</div>
+
+<button id="resignAllButton" class="fontAdjustment">Resign match
+    <p class="visually-hidden">This button resigns your match.</p>
+</button>
+
+<div>
+    <label class="fontAdjustment" for="gameModeDropdown">Select a game mode:</label>
+    <select class="fontAdjustment" id="gameModeDropdown" name="gameModes">
+        <option value="blitz">Blitz</option>
+        <option value="rapid">Rapid</option>
+        <option value="classical">Classical</option>
+    </select>
+</div>
+
+<div>
+    <button class="inline-button fontAdjustment" id="playComputerButton">Play against Computer
+        <p class="visually-hidden">This button will start a match of the specified game mode against the Lichess bot.</p>
+    </button>
+
+    <button class="inline-button fontAdjustment" id="playOnlineButton">Play online
+        <p class="visually-hidden">This button will start a match of the specified game mode against a real online player. </p>
+    </button>
+</div>
+
+<p id="error-message" class="error-message"></p>
+<audio id="silent-background" autoplay loop>
+    <source src="../sounds/ambient-piano.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<h3>
+    Font-Size
+</h3>
+
+<div>
+    <button class="round-button" id="fontEnlargeButton">+
+        <p class="visually-hidden">This button will enlarge the font</p>
+    </button>
+
+    <button class="round-button" id="fontShrinkButton">-
+        <p class="visually-hidden">This button will shrink the font</p>
+    </button>
+</div>
+
+</body>
+
+</html>
